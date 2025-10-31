@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Releases - Sarigama Music Corner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/SMC.PNG" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Specific Styles for Releases Page */
+        .releases-section {
+            padding-top: 120px;
+            background-color: var(--color-dark-base);
+            position: relative;
+            min-height: 100vh; 
+            display: flex;
+            align-items: center;
+        }
+
+        .releases-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            text-transform: uppercase; 
+        }
+
+        /* --- Embed Player Styling --- */
+        .embedded-player {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%; 
+        }
+
+        .player-title {
+            font-size: 2rem;
+            color: var(--color-accent-teal);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .spotify-iframe {
+            border-radius: 12px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 700px;
+        }
+        
+        .waveform-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath fill='none' stroke='%2300FFFF' stroke-width='0.5' d='M0 10c1.667 0 3.333-5 5-5s3.333 10 5 10 3.333-10 5-10 3.333 10 5 10 3.333-10 5-10 3.333 10 5 10 3.333-10 5-10 3.333 10 5 10 3.333-10 5-10 3.333 10 5 10 3.333-10 5-10'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 100px 20px;
+            filter: blur(5px);
+            animation: moveWaveform 30s linear infinite;
+        }
+
+        @keyframes moveWaveform {
+            from { background-position-x: 0; }
+            to { background-position-x: 1000px; }
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="assets/images/SMC.PNG" alt="Sarigama Music Corner Logo" class="glowing-logo">
+            <span>SMC</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="releases.html" class="active">Releases</a>
+            <a href="artists.html">Artists</a>
+            <a href="coming-soon.html">Radio/Knowledge</a>
+            <a href="index.html#contact" class="nav-contact-btn">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="releases-section">
+        <div class="waveform-bg"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            
+            <h1 class="releases-title glowing-text" data-aos="fade-down">LATEST FROM OUR STUDIO</h1>
+
+            <div class="embedded-player" data-aos="fade-up">
+                <h2 class="player-title">FEATURED SMC PLAYLIST</h2>
+                
+                <iframe data-testid="embed-iframe" style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/playlist/4hi3RkHMJVCZ2uTZKhncKT?utm_source=generator" 
+                    width="100%" height="352" 
+                    frameBorder="0" allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+                
+                <a href="https://open.spotify.com/playlist/4hi3RkHMJVCZ2uTZKhncKT?si=2e9913547b2a45bc" target="_blank" class="cta-button primary-cta" style="margin-top: 30px;">Listen on Spotify →</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>© 2025 Sarigama Music Corner. All Rights Reserved.</p>
+            <div class="social-links">
+                <span>Follow us:</span>
+                <a href="https://www.instagram.com/sarigamamusiccorner" target="_blank" class="glowing-link social-icon-gold"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/SarigamaMusic" target="_blank" class="glowing-link social-icon-teal"><i class="fab fa-youtube"></i></a>
+                <a href="https://open.spotify.com/artist/SarigamaMusicID" target="_blank" class="glowing-link social-icon-teal"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.linkedin.com/company/sarigamamusic" target="_blank" class="glowing-link social-icon-gold"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+
+</html>

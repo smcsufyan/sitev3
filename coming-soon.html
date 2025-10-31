@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Sarigama Music Corner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/SMC.PNG" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .coming-soon-section {
+            /* Full viewport height to ensure centering */
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(45deg, var(--color-dark-base) 0%, #150f24 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .soon-content {
+            padding: 50px 40px; /* Increased top/bottom padding for better vertical size */
+            max-width: 700px; /* Increased max-width for better desktop look */
+            z-index: 10;
+        }
+
+        .soon-content h1 {
+            font-size: 4.5rem; /* Slightly larger title */
+            color: var(--color-primary-accent); /* Cyan */
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px var(--color-primary-accent); 
+            line-height: 1.1;
+        }
+
+        .soon-content p {
+            font-size: 1.4rem; /* Larger font size for main message */
+            margin-bottom: 40px; /* Increased spacing */
+            color: rgba(255, 255, 255, 0.85); /* Brighter text */
+        }
+        
+        .animated-wave {
+            font-size: 5rem; /* Larger icon */
+            display: block;
+            margin: 0 auto 25px;
+            color: var(--color-primary-accent);
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { opacity: 0.8; transform: scale(1); }
+            to { opacity: 1; transform: scale(1.05); }
+        }
+
+        .back-home-button {
+             /* Using primary cta styles for home button */
+            margin-top: 20px;
+        }
+
+        /* Email details are removed */
+
+        /* Mobile adjustment for better size */
+        @media (max-width: 768px) {
+            .soon-content {
+                max-width: 90%; /* Use full width on mobile */
+                padding: 40px 20px;
+            }
+            .soon-content h1 { 
+                font-size: 3rem; /* Adjusted for smaller screens */
+            }
+            .soon-content p {
+                font-size: 1.1rem;
+            }
+            .animated-wave {
+                 font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="assets/images/SMC.PNG" alt="Sarigama Music Corner Logo" class="glowing-logo">
+            <span>SMC</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="releases.html">Releases</a>
+            <a href="artists.html">Artists</a>
+            <a href="blog-home.html">News Hub</a>
+            <a href="coming-soon.html" class="active">Radio/Knowledge</a>
+            <a href="index.html#contact" class="nav-contact-btn">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="coming-soon-section">
+        <div class="soon-content glass-card" data-aos="zoom-in">
+            <span class="animated-wave">📻</span>
+            <h1>BROADCAST IN PROGRESS</h1>
+            <p>Our **Knowledge Hub** and **Sarigama Radio** are being mastered to bring you exclusive content, tutorials, and behind-the-scenes access. Stay tuned!</p>
+            
+            <a href="index.html" class="cta-button primary-cta back-home-button">
+                <i class="fas fa-home"></i> Back to Home
+            </a>
+
+            </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
