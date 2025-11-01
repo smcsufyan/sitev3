@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sarigamamusiccorner.in/sitemap.xml
